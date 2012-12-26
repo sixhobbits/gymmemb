@@ -1,0 +1,6 @@
+Flask==0.9
+Jinja2==2.6
+Werkzeug==0.8.3
+cx-Freeze==4.3.1
+distribute==0.6.32
+requests==1.0.4

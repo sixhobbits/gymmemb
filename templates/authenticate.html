@@ -1,0 +1,17 @@
+<html>
+<body onload="refocus()">
+<form action='/manage' method="POST">
+Password: <input type="password" id="in" name="pw">
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
+
+<script>
+function refocus()
+{
+// move to external file as used twice
+document.getElementById("in").focus();
+}
+</script>

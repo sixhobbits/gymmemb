@@ -1,0 +1,23 @@
+<html>
+<title>
+Gym Membership - Manage
+</title>
+<body onload="refocus()">
+<h1> New member </h1>
+<form action="/newmember" method="POST" enctype=multipart/form-data>
+  Number: <input type="text" id="mnum" name="num"  style="position:absolute;Left:100"><br><br>
+  First name:<input type="text" id="fname" name="first" style="position:absolute;Left:100"><br><br>
+  Last name:<input type="text" name="last" style="position:absolute;Left:100"><br><br>
+  Telephone:<input type="text" name="phone" style="position:absolute;Left:100"><br><br>
+  Photo:<input type="file" name="pic" style="position:absolute;Left:100"><br><br>
+  <input type="submit" value="Submit"> &emsp;
+</form>
+</html>
+</body>
+
+<script>
+function refocus()
+{
+document.getElementById("mnum").focus();
+}
+</script>
