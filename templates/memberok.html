@@ -1,8 +1,15 @@
 <html>
 <body>
-<h1> MEMBER MAY ENTER </h1>
+<h1> MEMBER INFO</h1>
+{% if m.account == "True" %}
+	<h2>ACCOUNT OK</h2>
+{% else %}
+	<h2><font color="red">ACCOUNT NOT PAID </font></h2>
+{% endif %}
+
+
 member no: {{m.num}}<br>
-Firstname: {{m.fname}}<br>
+First name: {{m.fname}}<br>
 Surname: {{m.sname}}<br>
 Telephone: {{m.phone}}<br>
 Photo: <br>

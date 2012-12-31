@@ -2,9 +2,10 @@
 <title>
 Gym Membership - Manage
 </title>
-<body onload="refocus()">
+
+<body onload={{err}}>
 <h1> New member </h1>
-<form action="/newmember" method="POST" enctype=multipart/form-data>
+<form name="form" onsubmit="return validate();" action="/newmember" method="POST" enctype=multipart/form-data>
   Number: <input type="text" id="mnum" name="num"  style="position:absolute;Left:100"><br><br>
   First name:<input type="text" id="fname" name="first" style="position:absolute;Left:100"><br><br>
   Last name:<input type="text" name="last" style="position:absolute;Left:100"><br><br>
@@ -12,12 +13,98 @@ Gym Membership - Manage
   Photo:<input type="file" name="pic" style="position:absolute;Left:100"><br><br>
   <input type="submit" value="Submit"> &emsp;
 </form>
-</html>
+
+<h1> Member Info </h1>
+<form action="/info" method="POST" name="idform">
+	Member: <input type="text" name="id" id="in" onkeyup="autosend()" maxlength=3>
+	<input type="submit" value="Submit">
+</form>
+
+<h1> Remove Member </h1>
+<form name="delete" onsubmit="return confirm_delete();" action="/removemember" method="POST">
+  Number: <input type="text" id="dmnum" name="dnum">
+  <input type="submit" value="Submit">
+</form>
+
+<h1> Change Status </h1>
+<form name="account" action="/toggleaccount" method="POST">
+  Number: <input type="text" id="dmnum" name="tnum">
+  <input type="submit" value="Submit">
+</form>
+
+{%if d == "member_ok" %}
+	<iframe src="/memberfine" width="500" height="500" align="right" onload="refocus()" frameborder="0" style="position:absolute;Left:300;top:0"> </iframe>
+{% else %}
+	{%if d == "not_found" %}
+		<iframe src="/memberinvalid" width="500" height="500" align="right" onload="refocus()" frameborder="0" style="position:absolute;Left:300;top:0"> </iframe>
+	{% else %}
+		{%if d == "names" %}
+			<iframe src="/namematches" width="500" height="700" align="right" onload="refocus()" frameborder="0" style="position:absolute;Left:300;top:0"> </iframe>
+		{% endif %}
+	{% endif %}
+{% endif %}
+
+<style>
+#bottomDiv { position: absolute; bottom: 0; font-size:small; color:lightgrey;}
+</style>
+<div id="bottomDiv">&copy; 2012 - Gareth Dwyer, garethdwyer@gmail.com</div>
+
 </body>
+</html>
 
 <script>
+function focusandinform(message){
+  inform(message);
+  refocus();
+}
+
 function refocus()
 {
-document.getElementById("mnum").focus();
+document.getElementById("in").focus();
+}
+
+function inform(message)
+{
+  if(message=="dup_num"){
+    alert("member number already in use");
+  }
+  else if (message == "added"){
+    alert("member added to database");
+  }
+  else if (message == "deleted"){
+	alert("member successfully deleted");
+  }
+  else if (message =="toggled"){
+	alert("member's account info updated");
+  }
+}
+
+function confirm_delete(){
+	var conf = confirm("Delete member?");
+	return conf
+}
+	
+
+function validate()
+{
+var mnum = document.forms["form"]["mnum"].value;
+var first = document.forms["form"]["first"].value;
+var last = document.forms["form"]["last"].value;
+var phone = document.forms["form"]["phone"].value;
+var pic =document.forms["form"]["pic"].value;
+
+if (mnum == null || mnum == "" || first == null || first == "" ||
+	last == null || last == "" || phone == null || phone == "" ||
+	pic == null ||  pic == "")
+  {
+  alert("please fill out all fields");
+  return false;
+  }
+}
+
+function autosend(){
+	if ((document.getElementById("in").value).length == 3){
+	    document.forms['idform'].submit();
+    }
 }
 </script>

@@ -1,0 +1,7 @@
+connecting to database...
+init flask.
+arch?
+Query by Surname
+
+Query successful
+

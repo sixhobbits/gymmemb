@@ -1,17 +1,34 @@
 <html>
-<body onload="refocus()">
-<form action='/manage' method="POST">
+<body onload={{err}}>
+<form action='/auth' method="POST">
 Password: <input type="password" id="in" name="pw">
 <input type="submit" value="Submit">
 </form>
+<style>
+#bottomDiv { position: absolute; bottom: 0; font-size:small; color:lightgrey;}
+</style>
+<div id="bottomDiv">&copy; 2012 - Gareth Dwyer, garethdwyer@gmail.com</div>
 </body>
 </html>
 
 
 <script>
+
+function focusandinform(message){
+  refocus()
+  inform(message)
+}
+
 function refocus()
 {
-// move to external file as used twice
 document.getElementById("in").focus();
 }
+
+function inform(message)
+{
+  if(message=="try_again"){
+    alert("Incorrect password. Check Capslock Key")
+  }
+}
+
 </script>

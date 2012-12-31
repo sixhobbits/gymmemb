@@ -1,0 +1,99 @@
+connecting to database...
+init flask.
+
+member found in database
+001
+executing ID query
+executed select
+member found in database
+002
+executing ID query
+executed select
+member found in database
+002
+executing ID query
+executed select
+member found in database
+002
+executing ID query
+executed select
+member found in database
+002
+executing ID query
+executed select
+member found in database
+001
+executing ID query
+executed select
+member found in database
+002
+executing ID query
+executed select
+member found in database
+002
+executing ID query
+executed select
+member found in database
+dwy
+couldn't convert to int. Surname search?
+Query by Surname
+
+Query successful
+
+dwy
+couldn't convert to int. Surname search?
+Query by Surname
+
+Query successful
+
+dwy
+couldn't convert to int. Surname search?
+Query by Surname
+
+Query successful
+
+smi
+couldn't convert to int. Surname search?
+Query by Surname
+
+Query successful
+
+smi
+couldn't convert to int. Surname search?
+Query by Surname
+
+Query successful
+
+001
+executing ID query
+executed select
+member found in database
+003
+executing ID query
+executed select
+004
+executing ID query
+executed select
+005
+executing ID query
+executed select
+member found in database
+012
+executing ID query
+executed select
+member found in database
+002
+executing ID query
+executed select
+member found in database
+003
+executing ID query
+executed select
+003
+executing ID query
+executed select
+member found in database
+003
+executing ID query
+executed select
+member found in database

@@ -1,0 +1,8 @@
+connecting to database...
+init flask.
+dwy
+couldn't convert to int. Surname search?
+Query by Surname
+
+Query successful
+

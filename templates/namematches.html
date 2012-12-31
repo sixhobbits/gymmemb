@@ -1,0 +1,23 @@
+<html>
+<body>
+<h1> Matches </h1>
+<table border="0">
+	<tr>
+		<td><b>Mem</b></td>
+		<td><b>Name</b></td>
+		<td><b>Account</b></td>
+	<tr>
+	{% for member in members %}
+	<tr>
+		<td style="padding-right:50px;">{{member[0]}}</td>
+		<td style="padding-right:50px;">{{member[2]}}, {{member[1]}}</td>
+		<td style="padding-right:50px;"> 
+		{% if member[5] == "True" %}
+		OK </td>
+		{% else %}
+		<font color="red"> NOT PAID </font></td>
+		{% endif %}
+	</tr>
+	{% endfor %}
+</table>
+</body>

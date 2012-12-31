@@ -1,0 +1,12 @@
+connecting to database...
+init flask.
+
+member found in database
+001
+executing ID query
+executed select
+member found in database
+001
+executing ID query
+executed select
+member found in database

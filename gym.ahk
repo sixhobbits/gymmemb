@@ -5,10 +5,10 @@ WinClose Gym Membership - Index
 Sleep,1000
 #IfWinExist
 
-run, c:/users/Gareth/Desktop/gymmemb/index.py
+run, index.exe, workingDir
 WinWaitActive ahk_class ConsoleWindowClass
 run, http://localhost:5000
-WinWaitActive Gym Membership - Index
+WinWaitActive ahk_class Chrome_WidgetWin_1
 Send,{F11}
-run, block.ahk, workingDir
+run, block.exe, workingDir
 return

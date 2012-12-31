@@ -1,6 +1,6 @@
 ﻿#Persistent
 #SingleInstance,Force
-MouseMove A_ScreenWidth,A_ScreenHeight
+MouseMove 0,A_ScreenHeight
 BlockInput,MouseMove
 
 
@@ -26,8 +26,7 @@ Tab::
 return
 $F11::return ; Allow full-screen mode to be exited by simulated keystroke
 
-
-
+CapsLock & Space::
 ^+q::
 WinClose Gym Membership - Index
 WinClose ahk_class ConsoleWindowClass
