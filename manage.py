@@ -13,7 +13,7 @@ f = open(fn, 'w')
 
 UPLOAD_FOLDER = os.getcwd() + '\\static'
 print UPLOAD_FOLDER
-ALLOWED_EXTENSIONS = set(['jpg','jpeg','gif','png'])
+ALLOWED_EXTENSIONS = set(['jpg','jpeg','gif','png', 'JPG', 'JPEG', 'GIF', 'PNG'])
 
 # init database
 conn = sqlite3.connect("members.db")

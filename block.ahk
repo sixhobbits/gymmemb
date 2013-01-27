@@ -1,6 +1,6 @@
 ﻿#Persistent
 #SingleInstance,Force
-MouseMove 0,A_ScreenHeight
+MouseMove 40,A_ScreenHeight
 BlockInput,MouseMove
 
 
